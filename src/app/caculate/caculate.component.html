@@ -1,0 +1,53 @@
+
+<div class="zone-app-component">
+    <div class="container">
+  
+      <!-- Exercise 1 -->
+      <div class="question">
+        <div class="card">
+          <div class="card-body">
+            <h4> Click【Submit】button to calculate !</h4>
+            
+            <label for="radius-input" class="form-label">Radius</label>
+            <input
+              type="number"
+              class="form-control"
+              name="radius-input"
+              id="radius-input"
+              min="1"
+              placeholder="Enter circle's radius..."
+              [(ngModel)]="circleRadius"
+              (input)="handleAutoCal()"
+            >
+  
+            <div class="mt-3">
+              <button class="btn btn-outline-primary" (click)="handleSubmit()">Submit 🖋</button>
+            </div>
+            <div class="mt-3">
+              <button class="btn btn-outline-primary" (click)="handleChangeScreen()">Go to new screen 🖋</button>
+            </div>
+            <div class="mt-3 text-center">
+              <p>➥ Circle's circumference: <strong>{{ circleCircumference }}</strong></p>
+              <p>➥ Circle's area: <strong>{{ circleArea }}</strong></p>
+            </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Exercise 2 -->
+        <div class="question">
+          <div class="card">
+            <div class="card-body">
+              <p>📝2: Upgrade Circle Calculator in 📝1 so that circumference and area are calculated and output automatically without submission.</p>
+              <h4>Automatic calculation circle's circumference and area !</h4>
+              
+              <div class="mt-3 text-center">
+                <p>➥ Circle's circumference: <strong>{{ circumferenceAutoCalculate }}</strong></p>
+                <p>➥ Circle's area: <strong>{{ areaAutoCalc }}</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+  </div>
